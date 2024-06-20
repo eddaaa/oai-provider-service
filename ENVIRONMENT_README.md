@@ -48,3 +48,23 @@ As far as I can see, the 'host' variable is ignored in the code, but the 'port' 
     "port": 3000
 }
 ```
+
+### Docker start example
+Docker start example, assuming there is a network called
+'scicatlive_default'.
+```
+docker run \
+   --network=scicatlive_default  \
+   -e CONNECTOR=mongodb \
+   -e DB_HOST=mongodb \
+   -e DB_PORT=27017   \
+   -e DB_USER=""      \
+   -e DB_PASSWORD=""  \
+   -e DATABASE=dacat-next \
+   -e COLLECTION=PublishedData \
+   -e COLLECTION_ID="_id" \
+   -e HOST_CONFIG=server/host_config.json \
+   -p 7002:3001 \
+   --name=oai-pmh-provider \
+   oai-pmh-provider
+```
