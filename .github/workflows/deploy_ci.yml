@@ -2,10 +2,8 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
-      - master
+    branches: [master]
+  pull_request: [master]
 
 jobs:
   deploy:
