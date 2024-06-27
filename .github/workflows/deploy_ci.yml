@@ -38,6 +38,7 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=raw,value=latest
+            type=raw,value=v2.0
           
 
       - name: Build and push
@@ -46,5 +47,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
-          #tags: ${{ steps.meta.outputs.tags }}
+          # tags: ghcr.io/${{ github.repository }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
