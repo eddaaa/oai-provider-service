@@ -38,7 +38,7 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=raw,value=latest
-            type=raw,value=v2.0
+            type=raw,value=v3.0
           
 
       - name: Build and push
