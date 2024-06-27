@@ -27,7 +27,7 @@ RUN npm install
 COPY . .
 
 # Copy environment example to .env
-COPY ENV_EXAMPLE ./.env
+# COPY ENV_EXAMPLE ./.env
 
 # Compile your application
 RUN npm run compile
