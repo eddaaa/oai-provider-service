@@ -8,7 +8,7 @@
 # COPY . .
 # RUN npm run clean
 # RUN npm run compile
-# RUN npm run distclean
+# RUN npm run distcleancurl http://localhost:7005
 
 # CMD ["npm", "start"]
 
